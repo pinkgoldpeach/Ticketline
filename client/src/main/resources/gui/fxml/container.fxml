@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.Pane?>
+
+<!-- random comment -->
+
+<Pane fx:id="root" prefHeight="550.0" prefWidth="702.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.ac.tuwien.inso.ticketline.client.gui.controller.ContainerController">
+    <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="700.0">
+        <menus>
+            <Menu fx:id="menuItemFile" mnemonicParsing="false" text="\%generic.file">
+                <items>
+                    <MenuItem fx:id="menuItemLogout" mnemonicParsing="false" onAction="#handleLogout" text="\%generic.logout" />
+                    <MenuItem fx:id="menuItemExit" mnemonicParsing="false" onAction="#handleExit" text="\%generic.exit" />
+                </items>
+            </Menu>
+            <Menu fx:id="menuItemNew" mnemonicParsing="false" text="\%generic.new">
+                <items>
+                    <MenuItem fx:id="menuItemNewUser" mnemonicParsing="false" onAction="#handleNewUser" text="\%generic.user" />
+                    <MenuItem fx:id="menuItemCustomer" mnemonicParsing="false" onAction="#handleNewCustomer" text="\%generic.customer" />
+                    <MenuItem fx:id="menuItemNewNews" mnemonicParsing="false" onAction="#handleNewNews" text="\%generic.news" />
+                </items>
+            </Menu>
+        </menus>
+    </MenuBar>
+    <TabPane fx:id="containerTabs" layoutY="27.0" prefHeight="522.0" prefWidth="700.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+            <Tab fx:id="landingTabPage" closable="false" text="\%tabname.landingPage">
+                <content>
+                    <fx:include source="landingPage.fxml" />
+                </content>
+            </Tab>
+            <Tab fx:id="searchEventsTabPage" closable="false" text="\%tabname.searchEvents">
+                <content>
+                    <fx:include source="searchEventsOverview.fxml" />
+                </content>
+            </Tab>
+            <Tab fx:id="ticketTabPage" closable="false" text="\%tabname.ticketPage">
+                <content>
+                    <fx:include source="ticketOverview.fxml" />
+                </content>
+            </Tab>
+
+            <Tab fx:id="top10TabPage" closable="false" text="TOP 10">
+                <content>
+                    <fx:include source="top10Overview.fxml" />
+                </content>
+            </Tab>
+            <Tab fx:id="invoiceTabPage" closable="false" text="\%tabname.invoicePage">
+                <content>
+                    <fx:include source="invoicePage.fxml" />
+                </content>
+            </Tab>
+            <Tab fx:id="customerTabPage" closable="false" text="\%tabname.customerPage">
+                <content>
+                    <fx:include source="customerSettings.fxml" />
+                </content>
+            </Tab>
+        </tabs>
+    </TabPane>
+</Pane>

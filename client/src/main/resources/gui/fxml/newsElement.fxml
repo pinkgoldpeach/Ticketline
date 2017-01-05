@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import java.net.URL?>
+<VBox fx:id="vbNewsElement" spacing="5.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="at.ac.tuwien.inso.ticketline.client.gui.controller.NewsElementController">
+    <stylesheets>
+        <URL value="@../css/newsElement.css"/>
+    </stylesheets>
+    <children>
+        <Label fx:id="lblDate" styleClass="newsPublishDate" text="&lt;01.01.1970 | 00:00&gt;"/>
+        <Label fx:id="lblTitle" styleClass="newsTitle" text="&lt;sampleTitle&gt;"/>
+        <Label fx:id="lblText" styleClass="newsText" text="&lt;Some text as sample description&gt;" wrapText="true"/>
+    </children>
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+    </padding>
+</VBox>

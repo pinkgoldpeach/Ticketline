@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="top10OverviewPane" maxWidth="702.0" minWidth="702.0" prefHeight="515.0" prefWidth="702.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.ac.tuwien.inso.ticketline.client.gui.controller.Top10OverviewController">
+    <children>
+        <BarChart fx:id="barChartTopTen" layoutX="6.0" layoutY="114.0" maxHeight="292.0" minHeight="196.0" prefHeight="288.0" prefWidth="692.0" stylesheets="@../css/barChart.css" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="114.0">
+            <xAxis>
+                <CategoryAxis side="BOTTOM" fx:id="xAxisAll" />
+            </xAxis>
+            <yAxis>
+                <NumberAxis fx:id="yAxisAll" prefHeight="218.0" prefWidth="46.0" side="LEFT" />
+            </yAxis>
+        </BarChart>
+      <BarChart fx:id="barChartTopTenType" layoutX="6.0" layoutY="114.0" maxHeight="292.0" minHeight="196.0" prefHeight="288.0" prefWidth="692.0" stylesheets="@../css/barChart.css" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="114.0">
+         <xAxis>
+            <CategoryAxis side="BOTTOM" fx:id="xAxisType" />
+         </xAxis>
+         <yAxis>
+            <NumberAxis fx:id="yAxisType" prefHeight="218.0" prefWidth="46.0" side="LEFT" />
+         </yAxis>
+      </BarChart>
+      <ChoiceBox fx:id="choiceBox" layoutX="538.0" layoutY="31.0" prefWidth="150.0" AnchorPane.rightAnchor="14.0" />
+      <Line endX="700.0" layoutX="2.0" layoutY="70.0" />
+      <Label fx:id="labelNoStatsCat" layoutX="14.0" layoutY="30.0" prefHeight="27.0" prefWidth="615.0" text="Label">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+
+    </children>
+</AnchorPane>

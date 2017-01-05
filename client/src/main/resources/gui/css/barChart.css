@@ -1,0 +1,8 @@
+.bar {
+    -fx-bar-fill: navy;
+}
+
+
+.onHover{
+    -fx-background-color: ORANGE;
+}

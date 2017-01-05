@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<project
+        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+        xmlns="http://maven.apache.org/POM/4.0.0"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>at.ac.tuwien.inso</groupId>
+        <artifactId>ticketline</artifactId>
+        <version>2.4</version>
+    </parent>
+
+    <groupId>at.ac.tuwien.inso.ticketline</groupId>
+    <artifactId>dto</artifactId>
+    <packaging>jar</packaging>
+
+    <name>Ticketline DTOs</name>
+
+    <dependencies>
+
+        <!-- Hibernate -->
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator</artifactId>
+        </dependency>
+
+        <!-- Jackson -->
+        
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+        </dependency>
+        
+        <!-- Swagger -->
+
+		<dependency>
+			<groupId>com.mangofactory</groupId>
+			<artifactId>swagger-springmvc</artifactId>
+		</dependency>
+
+        <!--
+        <dependency>
+            <groupId>antlr</groupId>
+            <artifactId>antlr</artifactId>
+            <version>RELEASE</version>
+        </dependency>
+        -->
+
+    </dependencies>
+
+</project>

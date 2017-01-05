@@ -1,0 +1,36 @@
+Tue May 17 01:39:27 CEST 2016  [debug] AvalonLogSystem initialized using logfile 'velocity.log'
+Tue May 17 01:39:27 CEST 2016   [info] ************************************************************** 
+Tue May 17 01:39:27 CEST 2016   [info] Starting Jakarta Velocity v1.4
+Tue May 17 01:39:27 CEST 2016   [info] RuntimeInstance initializing.
+Tue May 17 01:39:27 CEST 2016   [info] Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+Tue May 17 01:39:27 CEST 2016   [info] Trying to use logger class org.apache.velocity.runtime.log.AvalonLogSystem
+Tue May 17 01:39:27 CEST 2016   [info] Using logger class org.apache.velocity.runtime.log.AvalonLogSystem
+Tue May 17 01:39:27 CEST 2016   [info] Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+Tue May 17 01:39:27 CEST 2016   [info] Resource Loader Instantiated: org.apache.velocity.runtime.resource.loader.JarResourceLoader
+Tue May 17 01:39:27 CEST 2016   [info] JarResourceLoader : initialization starting.
+Tue May 17 01:39:27 CEST 2016   [info] JarResourceLoader # of paths : 1
+Tue May 17 01:39:27 CEST 2016   [info] JarResourceLoader : trying to load: jar:file:/C:/Users/Carla/.m2/repository/org/codehaus/mojo/webstart-maven-plugin/1.0-beta-6/webstart-maven-plugin-1.0-beta-6.jar!/
+Tue May 17 01:39:27 CEST 2016   [info]   JarHolder : attempting to connect to jar:file:/C:/Users/Carla/.m2/repository/org/codehaus/mojo/webstart-maven-plugin/1.0-beta-6/webstart-maven-plugin-1.0-beta-6.jar!/
+Tue May 17 01:39:27 CEST 2016   [info]   JarHolder : initialized JAR: jar:file:/C:/Users/Carla/.m2/repository/org/codehaus/mojo/webstart-maven-plugin/1.0-beta-6/webstart-maven-plugin-1.0-beta-6.jar!/
+Tue May 17 01:39:27 CEST 2016   [info] JarResourceLoader : initialization complete.
+Tue May 17 01:39:27 CEST 2016   [info] ResourceCache : initialized. (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+Tue May 17 01:39:27 CEST 2016   [info] Default ResourceManager initialization complete.
+Tue May 17 01:39:27 CEST 2016   [info] Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+Tue May 17 01:39:27 CEST 2016   [info] Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+Tue May 17 01:39:27 CEST 2016   [info] Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+Tue May 17 01:39:27 CEST 2016   [info] Loaded System Directive: org.apache.velocity.runtime.directive.Include
+Tue May 17 01:39:27 CEST 2016   [info] Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+Tue May 17 01:39:27 CEST 2016   [info] Created: 20 parsers.
+Tue May 17 01:39:27 CEST 2016   [info] Velocimacro : initialization starting.
+Tue May 17 01:39:27 CEST 2016   [info] Velocimacro : adding VMs from VM library template : VM_global_library.vm
+Tue May 17 01:39:27 CEST 2016  [error] ResourceManager : unable to find resource 'VM_global_library.vm' in any resource loader.
+Tue May 17 01:39:27 CEST 2016   [info] Velocimacro : error using  VM library template VM_global_library.vm : org.apache.velocity.exception.ResourceNotFoundException: Unable to find resource 'VM_global_library.vm'
+Tue May 17 01:39:27 CEST 2016   [info] Velocimacro :  VM library template macro registration complete.
+Tue May 17 01:39:27 CEST 2016   [info] Velocimacro : allowInline = true : VMs can be defined inline in templates
+Tue May 17 01:39:27 CEST 2016   [info] Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+Tue May 17 01:39:27 CEST 2016   [info] Velocimacro : allowInlineLocal = false : VMs defined inline will be  global in scope if allowed.
+Tue May 17 01:39:27 CEST 2016   [info] Velocimacro : messages on  : VM system will output logging messages
+Tue May 17 01:39:27 CEST 2016   [info] Velocimacro : autoload off  : VM system will not automatically reload global library macros
+Tue May 17 01:39:27 CEST 2016   [info] Velocimacro : initialization complete.
+Tue May 17 01:39:27 CEST 2016   [info] Velocity successfully started.
+Tue May 17 01:39:27 CEST 2016   [info] ResourceManager : found default-jnlp-template.vm with loader org.apache.velocity.runtime.resource.loader.JarResourceLoader

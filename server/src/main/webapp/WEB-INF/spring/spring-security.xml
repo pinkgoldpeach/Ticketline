@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans
+        xmlns="http://www.springframework.org/schema/security"
+        xmlns:beans="http://www.springframework.org/schema/beans"
+        xmlns:context="http://www.springframework.org/schema/context"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+                    http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+                    http://www.springframework.org/schema/context
+                    http://www.springframework.org/schema/context/spring-context-4.0.xsd
+                    http://www.springframework.org/schema/security 
+                    http://www.springframework.org/schema/security/spring-security-4.0.xsd">
+
+    <context:component-scan base-package="at.ac.tuwien.inso.ticketline.server.security"/>
+
+    <http
+            auto-config="false"
+            use-expressions="true"
+            entry-point-ref="restAuthenticationEntryPoint"
+            disable-url-rewriting="true">
+
+        <form-login
+                login-page="/login"
+                login-processing-url="/login"
+                authentication-success-handler-ref="authenticationHandler"
+                authentication-failure-handler-ref="authenticationHandler"
+                username-parameter="user"
+                password-parameter="password"/>
+
+        <logout
+                delete-cookies="JSESSIONID"
+                logout-url="/logout"
+                success-handler-ref="authenticationHandler"/>
+
+        <intercept-url pattern="/login" access="permitAll"/>
+        <intercept-url pattern="/service/info/user" access="permitAll"/>
+        <intercept-url pattern="/service/api-docs/**" access="permitAll"/>
+        <intercept-url pattern="/swagger-ui/**" access="permitAll"/>
+        <intercept-url pattern="/service/admin/**" access="hasRole('ROLE_ADMINISTRATOR')"/>
+        <intercept-url pattern="/service/news/publish" access="hasRole('ROLE_ADMINISTRATOR')"/>
+        <intercept-url pattern="/service/**" access="hasRole('ROLE_USER') or hasRole('ROLE_ADMINISTRATOR')"/>
+
+        <session-management session-fixation-protection="newSession"/>
+        
+        <csrf disabled="true"/>
+    </http>
+
+    <beans:bean id="authenticationHandler" class="at.ac.tuwien.inso.ticketline.server.security.AuthenticationHandler"/>
+
+    <beans:bean id="userAuthentication" class="at.ac.tuwien.inso.ticketline.server.security.UserAuthentication"/>
+
+    <beans:bean id="encoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder">
+        <beans:constructor-arg value="10"/>
+    </beans:bean>
+
+    <!-- Configure Authentication mechanism -->
+    <authentication-manager alias="authenticationManager">
+        <authentication-provider user-service-ref="userAuthentication">
+            <password-encoder ref="encoder"/>
+        </authentication-provider>
+    </authentication-manager>
+    
+
+
+</beans:beans>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="newEditCustomerWindow" prefHeight="469.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.ac.tuwien.inso.ticketline.client.gui.controller.NewEditCustomerController">
+    <children>
+        <Label fx:id="titleNewEditCustomer" layoutX="10.0" layoutY="14.0" text="&lt;title&gt;" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+            <font>
+                <Font name="System Bold Italic" size="15.0" />
+            </font>
+        </Label>
+
+        <ScrollPane fx:id="scrollPane" layoutY="55.0" prefHeight="255.0" prefWidth="300.0" AnchorPane.bottomAnchor="50.0" AnchorPane.topAnchor="45.0">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="364.0" prefWidth="282.0">
+                    <children>
+                        <TextField fx:id="labelFirstname" layoutX="10.0" layoutY="20.0" prefHeight="25.0" prefWidth="180.0" promptText="%customer.field.firstname" AnchorPane.rightAnchor="5.0" />
+                        <TextField fx:id="labelLastname" layoutX="10.0" layoutY="55.0" prefHeight="25.0" prefWidth="180.0" promptText="%customer.field.lastname" AnchorPane.rightAnchor="5.0" />
+                        <ChoiceBox fx:id="choiceGender" layoutX="10.0" layoutY="88.0" prefHeight="27.0" prefWidth="180.0" AnchorPane.rightAnchor="5.0" />
+                        <DatePicker fx:id="datePickerBirthday" layoutX="10.0" layoutY="122.0" prefHeight="27.0" prefWidth="180.0" promptText="%customer.field.birthday" AnchorPane.rightAnchor="5.0" />
+                        <TextField fx:id="labelEMail" layoutX="10.0" layoutY="156.0" prefHeight="25.0" prefWidth="180.0" promptText="%customer.field.email" AnchorPane.rightAnchor="5.0" />
+                        <TextField fx:id="labelStreet" layoutX="10.0" layoutY="213.0" prefHeight="25.0" prefWidth="180.0" promptText="%customer.field.street" AnchorPane.rightAnchor="5.0" />
+                        <TextField fx:id="labelPostalCode" layoutX="10.0" layoutY="248.0" prefHeight="25.0" prefWidth="180.0" promptText="%customer.field.postalcode" AnchorPane.rightAnchor="5.0" />
+                        <TextField fx:id="labelCity" layoutX="10.0" layoutY="282.0" prefHeight="25.0" prefWidth="180.0" promptText="%customer.field.city" AnchorPane.rightAnchor="5.0" />
+                        <TextField fx:id="labelCountry" layoutX="10.0" layoutY="320.0" prefHeight="25.0" prefWidth="180.0" promptText="%customer.field.country" AnchorPane.rightAnchor="5.0" />
+                        <Line endX="283.0" layoutX="111.0" layoutY="200.0" AnchorPane.leftAnchor="0.0" />
+                        <Label layoutX="21.0" layoutY="25.0" text="%customer.field.firstname" AnchorPane.leftAnchor="5.0" />
+                        <Label layoutX="21.0" layoutY="60.0" text="%customer.field.lastname" AnchorPane.leftAnchor="5.0" />
+                        <Label layoutX="21.0" layoutY="93.0" text="%customer.field.gender" AnchorPane.leftAnchor="5.0" />
+                        <Label layoutX="21.0" layoutY="127.0" text="%customer.field.birthday" AnchorPane.leftAnchor="5.0" />
+                        <Label layoutX="21.0" layoutY="161.0" text="%customer.field.email" AnchorPane.leftAnchor="5.0" />
+                        <Label layoutX="14.0" layoutY="218.0" text="%customer.field.street" AnchorPane.leftAnchor="5.0" />
+                        <Label layoutX="14.0" layoutY="253.0" text="%customer.field.postalcode" AnchorPane.leftAnchor="5.0" />
+                        <Label layoutX="14.0" layoutY="287.0" text="%customer.field.city" AnchorPane.leftAnchor="5.0" />
+                        <Label layoutX="14.0" layoutY="325.0" text="%customer.field.country" AnchorPane.leftAnchor="5.0" />
+                    </children>
+                </AnchorPane>
+            </content>
+        </ScrollPane>
+
+        <Button fx:id="btnSaveCustomer" layoutX="11.0" layoutY="420.0" mnemonicParsing="false" onAction="#handleSaveCustomer" text="%generic.save" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" />
+        <Button fx:id="btnCancel" layoutX="183.0" layoutY="420.0" mnemonicParsing="false" onAction="#handleCancel" prefHeight="27.0" prefWidth="107.0" text="%generic.cancel" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+    </children>
+</AnchorPane>

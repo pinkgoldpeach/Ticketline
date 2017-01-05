@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="newEditUserWindow" prefHeight="445.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.ac.tuwien.inso.ticketline.client.gui.controller.NewEditUserController">
+    <children>
+        <Label fx:id="titleNewEditUser" layoutX="10.0" layoutY="14.0" text="&lt;title&gt;" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+            <font>
+                <Font name="System Bold Italic" size="15.0" />
+            </font>
+        </Label>
+
+        <ScrollPane fx:id="scrollPane" layoutY="55.0" prefHeight="255.0" prefWidth="300.0" AnchorPane.bottomAnchor="50.0" AnchorPane.topAnchor="45.0">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="579.0" prefWidth="282.0">
+                    <children>
+                        <TextField fx:id="labelFirstname" layoutX="10.0" layoutY="14.0" prefHeight="25.0" prefWidth="180.0" promptText="%admin.field.firstname" AnchorPane.rightAnchor="5.0" />
+                        <TextField fx:id="labelLastname" layoutX="10.0" layoutY="48.0" prefHeight="25.0" prefWidth="180.0" promptText="%admin.field.lastname" AnchorPane.rightAnchor="5.0" />
+                        <ChoiceBox fx:id="choiceGender" layoutX="10.0" layoutY="85.0" prefHeight="27.0" prefWidth="180.0" AnchorPane.rightAnchor="5.0" />
+                        <TextField fx:id="labelInsuranceNo" layoutX="10.0" layoutY="121.0" prefHeight="25.0" prefWidth="180.0" promptText="%admin.field.insurance" AnchorPane.rightAnchor="5.0" />
+                        <DatePicker fx:id="datePickerBirthday" layoutX="10.0" layoutY="156.0" prefHeight="27.0" prefWidth="180.0" promptText="%admin.field.birthday" AnchorPane.rightAnchor="5.0" />
+                        <TextField fx:id="labelStreet" layoutX="10.0" layoutY="210.0" prefHeight="25.0" prefWidth="180.0" promptText="%admin.field.street" AnchorPane.rightAnchor="5.0" />
+                        <TextField fx:id="labelPostalCode" layoutX="10.0" layoutY="243.0" prefHeight="25.0" prefWidth="180.0" promptText="%admin.field.postalCode" AnchorPane.rightAnchor="5.0" />
+                        <TextField fx:id="labelCity" layoutX="10.0" layoutY="279.0" prefHeight="25.0" prefWidth="180.0" promptText="%admin.field.city" AnchorPane.rightAnchor="5.0" />
+                        <TextField fx:id="labelCountry" layoutX="10.0" layoutY="315.0" prefHeight="25.0" prefWidth="180.0" promptText="%admin.field.country" AnchorPane.rightAnchor="5.0" />
+                        <TextField fx:id="labelUsername" layoutX="10.0" layoutY="366.0" prefHeight="25.0" prefWidth="180.0" promptText="%admin.field.username" AnchorPane.rightAnchor="5.0" />
+                        <TextField fx:id="labelPassword" layoutX="10.0" layoutY="400.0" prefHeight="25.0" prefWidth="180.0" promptText="%admin.field.password" AnchorPane.rightAnchor="5.0" />
+                        <TextField fx:id="labelEMail" layoutX="10.0" layoutY="435.0" prefHeight="25.0" prefWidth="180.0" promptText="%admin.field.email" AnchorPane.rightAnchor="5.0" />
+                        <DatePicker fx:id="datePickerEmployeedSince" layoutX="10.0" layoutY="469.0" prefHeight="27.0" prefWidth="180.0" promptText="%admin.field.employeedSince" AnchorPane.rightAnchor="5.0" />
+                        <ChoiceBox fx:id="choiceRole" layoutX="10.0" layoutY="504.0" maxWidth="180.0" minWidth="180.0" prefHeight="27.0" prefWidth="180.0" AnchorPane.rightAnchor="5.0" />
+                        <CheckBox fx:id="isBlocked" layoutX="71.0" layoutY="547.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="140.0" text="%admin.field.userBlocked" />
+                        <Line endX="282.0" layoutX="111.0" layoutY="200.0" AnchorPane.leftAnchor="0.0" />
+                        <Line endX="282.0" layoutX="105.0" layoutY="355.0" AnchorPane.leftAnchor="0.0" />
+                        <Label layoutX="20.0" layoutY="19.0" text="%admin.field.firstname" AnchorPane.leftAnchor="5.0" />
+                        <Label layoutX="20.0" layoutY="53.0" text="%admin.field.lastname" AnchorPane.leftAnchor="5.0" />
+                        <Label layoutX="19.0" layoutY="90.0" text="%admin.field.gender" AnchorPane.leftAnchor="5.0" />
+                        <Label layoutX="19.0" layoutY="126.0" text="%admin.field.insurance" AnchorPane.leftAnchor="5.0" />
+                        <Label layoutX="18.0" layoutY="161.0" text="%admin.field.birthday" AnchorPane.leftAnchor="5.0" />
+                        <Label layoutX="11.0" layoutY="215.0" text="%admin.field.street" AnchorPane.leftAnchor="5.0" />
+                        <Label layoutX="11.0" layoutY="248.0" text="%admin.field.postalCode" AnchorPane.leftAnchor="5.0" />
+                        <Label layoutX="11.0" layoutY="284.0" text="%admin.field.city" AnchorPane.leftAnchor="5.0" />
+                        <Label layoutX="19.0" layoutY="320.0" text="%admin.field.country" AnchorPane.leftAnchor="5.0" />
+                        <Label layoutX="14.0" layoutY="371.0" text="%admin.field.username" AnchorPane.leftAnchor="5.0" />
+                        <Label layoutX="13.0" layoutY="405.0" text="%admin.field.password" AnchorPane.leftAnchor="5.0" />
+                        <Label layoutX="14.0" layoutY="440.0" text="%admin.field.email" AnchorPane.leftAnchor="5.0" />
+                        <Label layoutX="18.0" layoutY="474.0" text="%admin.field.employeedSince" AnchorPane.leftAnchor="5.0" />
+                        <Label layoutX="19.0" layoutY="509.0" text="%admin.field.role" AnchorPane.leftAnchor="5.0" />
+                    </children>
+                </AnchorPane>
+            </content>
+        </ScrollPane>
+
+        <Button fx:id="btnSaveUser" layoutX="11.0" layoutY="420.0" mnemonicParsing="false" onAction="#handleSaveUser" text="%generic.save" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" />
+        <Button fx:id="btnCancel" layoutX="183.0" layoutY="420.0" mnemonicParsing="false" onAction="#handleCancel" prefHeight="27.0" prefWidth="107.0" text="%generic.cancel" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+    </children>
+</AnchorPane>

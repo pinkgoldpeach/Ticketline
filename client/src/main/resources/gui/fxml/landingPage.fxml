@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="landingPagePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="435.0" prefWidth="702.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.ac.tuwien.inso.ticketline.client.gui.controller.LandingPageController">
+    <children>
+        <VBox alignment="CENTER" layoutX="1.0" layoutY="30.0" minHeight="127.0" minWidth="231.0" prefHeight="368.0" prefWidth="702.0" spacing="5.0">
+            <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </padding>
+            <children>
+                <ScrollPane fitToWidth="true" hbarPolicy="NEVER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" pickOnBounds="false" prefHeight="359.0" prefWidth="693.0" style="-fx-background-color: #FFFFFF;" vbarPolicy="ALWAYS">
+                    <content>
+                        <VBox fx:id="vbNewsBox" fillWidth="true">
+                            <padding>
+                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x3" />
+                            </padding>
+                            <stylesheets>
+                                <URL value="@../css/style.css" />
+                            </stylesheets>
+                        </VBox>
+                    </content>
+                </ScrollPane>
+            </children>
+        </VBox>
+        <Label fx:id="labelLoggedInUser" layoutX="7.0" layoutY="14.0" prefHeight="16.0" prefWidth="340.0" text="&lt;text&gt;">
+            <font>
+                <Font size="11.0" />
+            </font></Label>
+        <Label fx:id="informationLabel" layoutX="3.0" layoutY="402.0" text="Label" />
+        <Button fx:id="btnShowAll" layoutX="430.0" layoutY="398.0" mnemonicParsing="false" onAction="#handleShowAllNews" prefHeight="25.0" prefWidth="128.0" text="%news.allNews" />
+        <Button fx:id="btnReloadNews" layoutX="564.0" layoutY="398.0" mnemonicParsing="false" onAction="#handleReloadNews" prefHeight="25.0" prefWidth="128.0" text="%news.reload" />
+        <Button fx:id="btnPublishNews" layoutX="264.0" layoutY="398.0" mnemonicParsing="false" onAction="#handleNewNews" prefHeight="27.0" prefWidth="159.0" text="\%generic.publishNews" />
+    </children>
+</AnchorPane>

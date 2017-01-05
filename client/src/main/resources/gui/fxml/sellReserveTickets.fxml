@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+
+<AnchorPane fx:id="sellReserveTicketsPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="482.0" prefWidth="570.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.ac.tuwien.inso.ticketline.client.gui.controller.SellReserveTicketsController">
+   <children>
+      <Label fx:id="labelHeader" layoutX="33.0" layoutY="14.0" text="Label" />
+      <Label fx:id="labelSelectedShow" layoutX="33.0" layoutY="57.0" prefHeight="17.0" prefWidth="95.0" text="Label" />
+      <Label fx:id="labelShowDate" layoutX="33.0" layoutY="85.0" prefHeight="17.0" prefWidth="95.0" text="Label" />
+      <Label fx:id="labelCustomer" layoutX="33.0" layoutY="133.0" prefHeight="17.0" prefWidth="95.0" text="Label" />
+      <Label fx:id="labelActualShowName" layoutX="149.0" layoutY="57.0" prefHeight="17.0" prefWidth="404.0" text="Label" />
+      <Label fx:id="labelActualShowDate" layoutX="149.0" layoutY="85.0" prefHeight="17.0" prefWidth="404.0" text="Label" />
+      <Label fx:id="labelActualCustomer" layoutX="149.0" layoutY="133.0" prefHeight="17.0" prefWidth="323.0" text="Label" />
+      <Button fx:id="buttonSelectCustomer" layoutX="149.0" layoutY="165.0" mnemonicParsing="false" onAction="#handleSelectCustomer" prefHeight="25.0" prefWidth="156.0" text="Button" />
+      <Label fx:id="labelSeats" layoutX="33.0" layoutY="219.0" prefHeight="17.0" prefWidth="95.0" text="Label" />
+      <Button fx:id="buttonSelectSeats" layoutX="149.0" layoutY="320.0" mnemonicParsing="false" onAction="#handleSelectSeats" text="Button" />
+      <Label fx:id="labelPriceTotal" layoutX="33.0" layoutY="394.0" prefHeight="17.0" prefWidth="95.0" text="Label" />
+      <Label fx:id="labelActualPriceTotal" layoutX="149.0" layoutY="394.0" text="Label" />
+      <Button fx:id="buttonSellTickets" layoutX="25.0" layoutY="437.0" mnemonicParsing="false" onAction="#handleSellTickets" prefHeight="17.0" prefWidth="150.0" text="Button" />
+      <Button fx:id="buttonReserveTickets" layoutX="183.0" layoutY="437.0" mnemonicParsing="false" onAction="#handleReserveTickets" prefHeight="25.0" prefWidth="150.0" text="Button" />
+      <Button fx:id="buttonAnonymousCustomer" layoutX="317.0" layoutY="165.0" mnemonicParsing="false" onAction="#handleAnonymousCustomer" prefHeight="25.0" prefWidth="156.0" text="Button" />
+      <Button fx:id="buttonCancel" layoutX="424.0" layoutY="437.0" mnemonicParsing="false" onAction="#handleCancel" prefHeight="25.0" prefWidth="123.0" text="Button" />
+      <Line endX="100.0" layoutX="137.0" layoutY="240.0" rotate="90.0" scaleX="1.8" startX="-100.0" />
+      <TextArea fx:id="labelSelectedSeats" editable="false" layoutX="149.0" layoutY="219.0" prefHeight="93.0" prefWidth="404.0" wrapText="true" />
+   </children>
+</AnchorPane>
